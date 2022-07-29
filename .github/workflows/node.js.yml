@@ -20,7 +20,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Upgrade NPM
-      run: npm install -g npm
+      run: npm install --location=global npm
 
     - name: Use Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
       uses: actions/setup-node@v1
