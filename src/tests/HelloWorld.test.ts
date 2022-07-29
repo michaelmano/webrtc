@@ -24,4 +24,14 @@ describe('HelloWorld.vue', () => {
 
         expect(wrapper.find('button').text()).toEqual('count is 1');
     });
+
+    it('will match the snapshot', async () => {
+        const msg = 'HelloWorld';
+
+        const wrapper = mount(HelloWorld, {
+            props: { msg },
+        });
+
+        expect(wrapper).toMatchSnapshot();
+    });
 });
