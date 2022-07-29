@@ -19,6 +19,13 @@
     "rules": {
         "indent": "off",
         "@typescript-eslint/indent": ["error"],
-        "import/no-extraneous-dependencies": ["error", { "devDependencies": ["src/*.test.ts", "vite.config.ts"]}]
+        "import/no-extraneous-dependencies": [
+            "error", {
+                "devDependencies": [
+                    "src/tests/**",
+                    "vite.config.ts"
+                ]
+            }
+        ]
     }
 }
