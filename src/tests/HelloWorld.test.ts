@@ -19,19 +19,21 @@ describe('HelloWorld.vue', () => {
     });
 
     it('should increment the button when clicked', async () => {
-        const wrapper = mount(HelloWorld);
+        const wrapper = mount(HelloWorld, {
+            props: { msg: 'test' },
+        });
         await wrapper.get('button').trigger('click');
 
         expect(wrapper.find('button').text()).toEqual('count is 1');
     });
 
-    it('will match the snapshot', async () => {
-        const msg = 'HelloWorld';
+    // it('will match the snapshot', async () => {
+    //     const msg = 'HelloWorld';
 
-        const wrapper = mount(HelloWorld, {
-            props: { msg },
-        });
+    //     const wrapper = mount(HelloWorld, {
+    //         props: { msg },
+    //     });
 
-        expect(wrapper).toMatchSnapshot();
-    });
+    //     expect(wrapper).toMatchSnapshot();
+    // });
 });
