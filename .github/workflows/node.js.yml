@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node-version: [14.x]
+        node-version: [16.13.2]
 
     steps:
     - uses: actions/checkout@v2
@@ -36,7 +36,7 @@ jobs:
     - run: npm run test
 
     # Only run the coverage once
-    - if: ${{ matrix.node-version == '14.x' }}
+    - if: ${{ matrix.node-version == '16.13.2' }}
       name: Get Coverage for badge
       run: |
         # var SUMMARY = [
@@ -67,7 +67,7 @@ jobs:
         echo $BRANCH_NAME
         # process.env.BRANCH = 'pull_27';
         echo "BRANCH=$(echo ${BRANCH_NAME})" >> $GITHUB_ENV
-    - if: ${{ matrix.node-version == '14.x' }}
+    - if: ${{ matrix.node-version == '16.13.2' }}
       name: Create the Badge
       uses: schneegans/dynamic-badges-action@v1.0.0
       with:
