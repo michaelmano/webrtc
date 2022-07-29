@@ -13,10 +13,7 @@ Install NVM from [https://github.com/coreybutler/nvm-windows/releases](https://g
 
 use [VSCode](https://code.visualstudio.com/) or an editor of your choice as long as it has the following extensions:
 
-### Install Extensions:
-
-Vue Language Features (Volar)
-ESLint
+Extensions required are: Vue Language Features (Volar) and ESLint
 
 ### Config setup
 Config and settings:
@@ -36,4 +33,11 @@ replace all with the following.
     ],
     "files.eol": "\n"
 }
+```
+
+## Before commiting
+
+```
+npm run lint
+npm run test
 ```
