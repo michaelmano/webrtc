@@ -26,9 +26,9 @@ export default defineConfig({
                 main: './src/main.ts',
             },
             output: {
-                entryFileNames: 'js/[name].js',
-                chunkFileNames: 'js/[name].js',
-                assetFileNames: 'css/[name].[ext]',
+                entryFileNames: '[name].js',
+                chunkFileNames: '[name].js',
+                assetFileNames: '[name].[ext]',
                 globals: {
                     vue: 'Vue',
                 },
