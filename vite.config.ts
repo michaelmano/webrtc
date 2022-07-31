@@ -26,9 +26,19 @@ export default defineConfig({
                 main: './src/main.ts',
             },
             output: {
-                entryFileNames: '[name].js',
-                chunkFileNames: '[name].js',
-                assetFileNames: '[name].[ext]',
+                entryFileNames: 'assets/js/[name].js',
+                chunkFileNames: 'assets/js/[name].js',
+                assetFileNames: ({ name }) => {
+                    if (/\.(gif|jpe?g|png|svg)$/.test(name ?? '')) {
+                        return 'assets/images/[name][extname]';
+                    }
+
+                    if (/\.css$/.test(name ?? '')) {
+                        return 'assets/css/[name][extname]';
+                    }
+
+                    return 'assets/[name][extname]';
+                },
                 globals: {
                     vue: 'Vue',
                 },
