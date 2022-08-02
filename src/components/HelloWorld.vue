@@ -4,7 +4,7 @@ import { ref } from 'vue';
 const count = ref<number>(0);
 
 const increment = () => {
-    count.value += 1;
+  count.value += 1;
 };
 
 defineProps<{ msg: string }>();
@@ -20,7 +20,7 @@ defineProps<{ msg: string }>();
     <button
       type="button"
       class="text-3xl font-bold underline text-green-400"
-      @click="increment"
+      @click="increment()"
     >
       count is {{ count }}
     </button>
@@ -35,6 +35,7 @@ defineProps<{ msg: string }>();
     <a
       href="https://vuejs.org/guide/quick-start.html#local"
       target="_blank"
+      rel="noopener noreferrer"
     >create-vue</a>, the official Vue + Vite starter
   </p>
   <p>
@@ -42,6 +43,7 @@ defineProps<{ msg: string }>();
     <a
       href="https://github.com/johnsoncodehk/volar"
       target="_blank"
+      rel="noopener noreferrer"
     >Volar</a>
     in your IDE for a better DX
   </p>

@@ -7,8 +7,10 @@ import VueIcon from './components/CoolIcon.vue';
 
 // const pinia = createPinia();
 // const app = createApp(App);
-const app = createApp({});
-app.component('VueButton', VueButton);
-app.component('VueIcon', VueIcon);
+const app = createApp({
+  name: 'main-app',
+});
+app.component('vue-button', VueButton);
+app.component('vue-icon', VueIcon);
 
 app.mount('#app');
