@@ -12,7 +12,7 @@ describe('User Store', () => {
     setActivePinia(createPinia());
   });
 
-  it('increments', () => {
+  it('allows the user to change their name', () => {
     const userStore = useUserStore();
     expect(userStore.user.name).toBe('James');
     userStore.updateName('John');
