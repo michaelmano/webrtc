@@ -1,16 +1,19 @@
 import { createApp } from 'vue';
-// import { createPinia } from 'pinia'; // This is a store
+import { createPinia } from 'pinia';
 import './style.css';
-// import App from './App.vue';
-import VueButton from './components/CoolButton.vue';
-import VueIcon from './components/CoolIcon.vue';
+import App from './App.vue';
+import VueButton from './components/VueButton.vue';
 
-// const pinia = createPinia();
-// const app = createApp(App);
-const app = createApp({
-  name: 'main-app',
-});
-app.component('vue-button', VueButton);
-app.component('vue-icon', VueIcon);
+let app;
+const pinia = createPinia();
+if (process.env.NODE_ENV === 'production') {
+  app = createApp({
+    name: 'main-app',
+  });
+  app.component('vue-button', VueButton);
+} else {
+  app = createApp(App);
+}
 
+app.use(pinia);
 app.mount('#app');

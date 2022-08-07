@@ -16,6 +16,9 @@ module.exports = {
     'plugin:vue/vue3-recommended',
   ],
   rules: {
+    // This is to be able to import .ts files without warnings
+    // @see https://github.com/microsoft/TypeScript/issues/27481
+    'import/extensions': 'off',
     'import/no-extraneous-dependencies': [
       'error',
       {

@@ -11,7 +11,7 @@ const vitestConfig: VitestUserConfigInterface = {
 export default defineConfig({
   test: vitestConfig.test,
   plugins: [vue()],
-  base: '/dist/',
+  base: '/',
   resolve: {
     alias: {
       vue: 'vue/dist/vue.esm-bundler.js',
