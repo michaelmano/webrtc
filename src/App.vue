@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import useUserStore from './stores/useUserStore';
+import useUserStore from './stores/user';
 import VueButton from './components/VueButton.vue';
 
 const userStore = useUserStore();

@@ -2,7 +2,7 @@ import { ref } from 'vue';
 import { defineStore } from 'pinia';
 import type User from '../types/User';
 
-export const useUserStore = defineStore({
+const useUserStore = defineStore({
   id: 'user',
   state: () => ({
     user: ref < User >({

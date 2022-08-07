@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import {
   expect, describe, it,
 } from 'vitest';
-import VueButton from './VueButton.vue';
+import VueButton from '@/components/VueButton.vue';
 
 describe('VueButton.vue', () => {
   it('should exist', async () => {
