@@ -22,7 +22,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['src/tests/**', 'vite.config.ts'],
+        devDependencies: ['src/**/*.test.*', 'vite.config.ts'],
       },
     ],
     // Disallow the use of console.

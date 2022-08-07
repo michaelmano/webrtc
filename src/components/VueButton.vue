@@ -1,8 +1,20 @@
 <script setup lang="ts">
+type ButtonType = 'button' | 'submit' | 'reset' | undefined;
+
+interface Props {
+  type: ButtonType,
+}
+
+defineProps<Props>();
+defineEmits(['click']);
+
 </script>
 
 <template>
-  <button class="px-4 py-2 bg-red-600">
+  <button
+    :type="type"
+    @click="$emit('click')"
+  >
     <slot></slot>
   </button>
 </template>
