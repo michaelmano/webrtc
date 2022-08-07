@@ -20,6 +20,9 @@ export const useUserStore = defineStore({
       this.user.name = newName;
     },
   },
+  persist: {
+    enabled: true,
+  },
 });
 
 export default useUserStore;
