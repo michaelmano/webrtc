@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import useUserStore from './stores/user';
 import VueButton from './components/VueButton.vue';
+import VueHeaderNavigation from './components/VueHeaderNavigation.vue';
 
 const userStore = useUserStore();
 const newName = ref('');
@@ -9,6 +10,7 @@ const newName = ref('');
 </script>
 
 <template>
+  <vue-header-navigation />
   <h1 class="text-2xl underline">
     Hello {{ userStore.name }}
   </h1>
