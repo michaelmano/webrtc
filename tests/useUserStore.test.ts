@@ -14,8 +14,13 @@ describe('User Store', () => {
 
   it('allows the user to change their name', () => {
     const userStore = useUserStore();
-    expect(userStore.user.name).toBe('James');
+    expect(userStore.name).toBe('James');
     userStore.updateName('John');
-    expect(userStore.user.name).toBe('John');
+    expect(userStore.name).toBe('John');
+  });
+
+  it('Has a website', () => {
+    const userStore = useUserStore();
+    expect(userStore.website).toBe('example.com');
   });
 });

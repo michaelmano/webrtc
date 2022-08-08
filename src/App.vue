@@ -10,7 +10,7 @@ const newName = ref('');
 
 <template>
   <h1 class="text-2xl underline">
-    Hello {{ userStore.user.name }}
+    Hello {{ userStore.name }}
   </h1>
   <input
     v-model="newName"
