@@ -17,5 +17,8 @@
     }
   },
   "include": ["vite.config.ts", ".eslintrc.cjs", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "tests/*.test.ts"],
+  "exclude": [
+    "tests/*.test.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
