@@ -6,7 +6,7 @@ import {
   MenuItem as VueMenuItem,
 } from '@headlessui/vue';
 
-type MenuItem = {
+interface MenuItem {
   name : string;
   path : string;
 }

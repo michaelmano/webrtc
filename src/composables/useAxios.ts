@@ -23,7 +23,7 @@ const useAxios = (url : string, config : AxiosRequestConfig = {}, skip = false) 
     }
   };
 
-  if (skip === false) {
+  if (!skip) {
     makeRequest();
   }
 

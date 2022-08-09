@@ -7,13 +7,15 @@ module.exports = {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
+    project: ['tsconfig.json'],
+    extraFileExtensions: ['.vue'],
   },
   plugins: ['@typescript-eslint'],
   extends: [
     // @see https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base
     'airbnb-base',
     // @see https://github.com/vuejs/eslint-plugin-vue
-    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/strict',
     'plugin:vue/vue3-recommended',
   ],
   rules: {
