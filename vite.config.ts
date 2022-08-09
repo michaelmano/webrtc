@@ -3,7 +3,7 @@ import type { UserConfig as VitestUserConfigInterface } from 'vitest/config';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
 
-const vitestConfig: VitestUserConfigInterface = {
+const vitestConfig : VitestUserConfigInterface = {
   test: {
     globals: true,
   },

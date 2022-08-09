@@ -9,12 +9,12 @@ const useUserStore = defineStore({
     email: 'James@example.com',
   }),
   getters: {
-    website():string {
+    website() : string {
       return this.email.substring(this.email.lastIndexOf('@') + 1);
     },
   },
   actions: {
-    updateName(newName: string):void {
+    updateName(newName : string) : void {
       this.name = newName;
     },
   },

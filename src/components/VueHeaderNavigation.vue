@@ -6,7 +6,27 @@ import {
   MenuItem as VueMenuItem,
 } from '@headlessui/vue';
 
+type MenuItem = {
+  name : string;
+  path : string;
+}
+
 const currentPath = window.location.pathname;
+
+const menuItems : MenuItem[] = [
+  {
+    name: 'Home',
+    path: '/',
+  },
+  {
+    name: 'Profile',
+    path: '/profile',
+  },
+  {
+    name: 'Logout',
+    path: '/logout',
+  },
+];
 </script>
 
 <template>
@@ -22,32 +42,17 @@ const currentPath = window.location.pathname;
     >
       <vue-menu-items as="ul">
         <vue-menu-item
+          v-for="(item, index) in menuItems"
+          :key="index"
           v-slot="{ active }"
           as="li"
         >
           <a
-            :class="{ 'bg-blue-500': active || currentPath === '/' }"
+            :class="{ 'bg-blue-500': active || currentPath === item.path }"
             href="/"
           >
-            Account settings
+            {{ item.name }}
           </a>
-        </vue-menu-item>
-        <vue-menu-item
-          v-slot="{ active }"
-          as="li"
-        >
-          <a
-            :class="{ 'bg-blue-500': active || currentPath === '/account-settings' }"
-            href="/account-settings"
-          >
-            Documentation
-          </a>
-        </vue-menu-item>
-        <vue-menu-item
-          as="li"
-          disabled
-        >
-          <span class="opacity-75">Invite a friend (coming soon!)</span>
         </vue-menu-item>
       </vue-menu-items>
     </transition>

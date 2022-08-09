@@ -8,14 +8,19 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
   },
+  plugins: ['@typescript-eslint'],
   extends: [
     // @see https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base
     'airbnb-base',
-
     // @see https://github.com/vuejs/eslint-plugin-vue
+    'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-recommended',
   ],
   rules: {
+    '@typescript-eslint/type-annotation-spacing': ['warn', {
+      before: true,
+      after: true,
+    }],
     // This is to be able to import .ts files without warnings
     // @see https://github.com/microsoft/TypeScript/issues/27481
     'import/extensions': 'off',

@@ -1,10 +1,10 @@
 import { ref } from 'vue';
 import axios, { AxiosRequestConfig } from 'axios';
 
-const useAxios = (url: string, config: AxiosRequestConfig = {}, skip = false) => {
+const useAxios = (url : string, config : AxiosRequestConfig = {}, skip = false) => {
   const data = ref<object | null>(null);
   const response = ref<object | null>(null);
-  const error = ref<any>(null);
+  const error = ref<unknown>(null);
   const loading = ref(false);
 
   const makeRequest = async () => {
@@ -16,7 +16,7 @@ const useAxios = (url: string, config: AxiosRequestConfig = {}, skip = false) =>
       });
       response.value = result;
       data.value = result.data;
-    } catch (exception: any) {
+    } catch (exception : unknown) {
       error.value = exception;
     } finally {
       loading.value = false;
