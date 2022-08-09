@@ -14,11 +14,14 @@ module.exports = {
   extends: [
     // @see https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base
     'airbnb-base',
-    // @see https://github.com/vuejs/eslint-plugin-vue
+    // @see https://github.com/typescript-eslint/typescript-eslint
     'plugin:@typescript-eslint/strict',
+    // @see https://github.com/vuejs/eslint-plugin-vue
     'plugin:vue/vue3-recommended',
   ],
   rules: {
+    // This is to force a space before annotations
+    // @see https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/type-annotation-spacing.md
     '@typescript-eslint/type-annotation-spacing': ['warn', {
       before: true,
       after: true,
