@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vue-tsc -p tsconfig.vite.json --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx,.vue --ignore-path .gitignore .",
     "test": "vitest --dom --coverage run",

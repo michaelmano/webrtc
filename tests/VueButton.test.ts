@@ -12,6 +12,7 @@ describe('VueButton.vue', () => {
   it('should render the label', async () => {
     const label = 'Click Me';
     const wrapper = mount(VueButton, {
+      props: { type: 'button' },
       slots: {
         default: label,
       },
@@ -21,7 +22,10 @@ describe('VueButton.vue', () => {
 
   it('should emit when clicked', async () => {
     const wrapper = mount(VueButton, {
-      props: { label: 'test' },
+      props: { type: 'button' },
+      slots: {
+        default: 'Button',
+      },
     });
     await wrapper.get('button').trigger('click');
 

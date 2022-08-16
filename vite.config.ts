@@ -6,6 +6,7 @@ import path from 'path';
 const vitestConfig : VitestUserConfigInterface = {
   test: {
     globals: true,
+    include: ['./tests/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
   },
 };
 
@@ -35,7 +36,7 @@ export default defineConfig({
             return 'assets/images/[name][extname]';
           }
 
-          if (/\.css$/.test(name ?? '')) {
+          if ((name ?? '').endsWith('.css')) {
             return 'assets/css/[name][extname]';
           }
 
