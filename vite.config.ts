@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import type { UserConfig as VitestUserConfigInterface } from 'vitest/config';
+import svgLoader from 'vite-svg-loader';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
 
@@ -12,7 +13,7 @@ const vitestConfig : VitestUserConfigInterface = {
 
 export default defineConfig({
   test: vitestConfig.test,
-  plugins: [vue()],
+  plugins: [vue(), svgLoader()],
   base: '/',
   resolve: {
     alias: {

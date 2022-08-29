@@ -3,11 +3,12 @@ import { ref } from 'vue';
 import useUserStore from './stores/user';
 import VueButton from './components/VueButton.vue';
 import VueHeaderNavigation from './components/VueHeaderNavigation.vue';
-import useEvent from './composables/event';
+import useEventListener from './composables/event';
+import SvgClock from './assets/clock.svg';
 
 const userStore = useUserStore();
 const newName = ref('');
-useEvent(window, 'scroll', (event : Event) : void => {
+useEventListener(window, 'scroll', (event : Event) : void => {
   console.log(window.scrollY);
   console.log(event);
 });
@@ -17,7 +18,7 @@ useEvent(window, 'scroll', (event : Event) : void => {
 <template>
   <vue-header-navigation />
   <h1 class="text-2xl underline h-screen mb-20">
-    Hello {{ userStore.name }}
+    Hello {{ userStore.name }} <svg-clock />
   </h1>
   <input
     v-model="newName"
