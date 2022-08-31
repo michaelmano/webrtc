@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import {
   expect, describe, it,
 } from 'vitest';
-import VueHeaderNavigation from '@/components/VueHeaderNavigation.vue';
+import VueHeaderNavigation from '../src/components/VueHeaderNavigation.vue';
 
 describe('VueHeaderNavigation.vue', () => {
   it('should exist', async () => {

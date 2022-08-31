@@ -2,7 +2,7 @@ import {
   expect, describe, it, beforeEach,
 } from 'vitest';
 import { setActivePinia, createPinia } from 'pinia';
-import useUserStore from '@/stores/user';
+import useUserStore from '../src/stores/user';
 
 describe('User Store', () => {
   beforeEach(() => {
